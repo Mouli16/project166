@@ -15,6 +15,8 @@ import pageObjects.LoginPage;
 
 public class ValidateNavBar extends Base {
 	
+	public WebDriver driver; 
+	
 @BeforeTest
  public void initialStep() throws IOException
  {

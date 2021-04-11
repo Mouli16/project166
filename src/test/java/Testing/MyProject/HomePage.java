@@ -2,6 +2,7 @@ package Testing.MyProject;
 
 import java.io.IOException;
 
+import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.DataProvider;
@@ -12,6 +13,7 @@ import pageObjects.LandingPage;
 import pageObjects.LoginPage;
 
 public class HomePage extends Base {
+	public WebDriver driver; 
 	
 	@BeforeTest
 	 public void initialStep() throws IOException
