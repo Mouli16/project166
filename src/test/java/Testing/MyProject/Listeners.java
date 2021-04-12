@@ -20,23 +20,27 @@ public class Listeners extends Base implements ITestListener{
 	
 	ExtentTest test;
 	ExtentReports extent = ExtentReporterNG.getReportObject();
+	ThreadLocal<ExtentTest> extentTest = new ThreadLocal<ExtentTest> ();
 	@Override
 	public void onTestStart(ITestResult result) {
 		// TODO Auto-generated method stub
-		 test = extent.createTest("InitialDemo");
+		 test = extent.createTest(result.getMethod().getMethodName());
+		 extentTest.set(test);
 		
 	}
 
 	@Override
 	public void onTestSuccess(ITestResult result) {
 		// TODO Auto-generated method stub
-		test.log(Status.PASS, "Test");
+		extentTest.get().log(Status.PASS, "Test passed");
 		
 	}
 
 	@Override
 	public void onTestFailure(ITestResult result) {
 		// TODO Auto-generated method stub
+		
+		extentTest.get().fail(result.getThrowable());
 		//Screenshot
 		WebDriver driver = null;
 		
