@@ -32,7 +32,7 @@ public class ValidateTitle extends Base {
 		LandingPage l = new LandingPage(driver);
 	    l.getTitle().getText();
 	    //compare the text with actual text from browser
-	    Assert.assertEquals(l.getTitle().getText(), "FEATURED ");
+	    Assert.assertEquals(l.getTitle().getText(), "FEATURED COURSES");
 		
 		
 	}
