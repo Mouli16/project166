@@ -2,19 +2,25 @@ package Testing.MyProject;
 
 import java.io.IOException;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebDriver;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
-import Resources.Base;
+import pageObjects.ForgotPassword;
 import pageObjects.LandingPage;
 import pageObjects.LoginPage;
+import Resources.Base;
 
 public class HomePage extends Base {
 	public WebDriver driver; 
 	
+	public static Logger log =LogManager.getLogger(Base.class.getName());
 	@BeforeTest
 	 public void initialStep() throws IOException
 	 {
@@ -34,8 +40,12 @@ public class HomePage extends Base {
 		LoginPage lo = new LoginPage(driver);
 		lo.getEmail().sendKeys(username);
 		lo.getPassword().sendKeys(password);
+		log.info(text);
+		
 		System.out.println(text);
 		lo.getLogin().click();
+		
+		
 	}
 
 	@DataProvider
