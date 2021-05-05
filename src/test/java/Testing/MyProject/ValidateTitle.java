@@ -4,7 +4,10 @@ import java.io.IOException;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.DataProvider;
@@ -35,9 +38,14 @@ public class ValidateTitle extends Base {
 		
 		LandingPage l = new LandingPage(driver);
 	    l.getTitle().getText();
-	    //compare the text with actual text from browser
+	    //compare the text with actual text from browser 
 	    Assert.assertEquals(l.getTitle().getText(), "FEATURED ");
 	   log .info("Successfully validated Text message");
+	   
+	   Actions a = new Actions(driver);
+		a.moveToElement(driver.findElement(By.name("Contact"))).build().perform();
+	
+		a.moveToElement(driver.findElement(By.name("Contact"))).click().keyDown(Keys.SHIFT).sendKeys("hello").build().perform();
 		
 		
 	}
