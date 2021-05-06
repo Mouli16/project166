@@ -30,7 +30,7 @@ public class Base {
 		if(BrowserName.equals("chrome"))
 		{
 			//execute in chrome browser
-			System.setProperty("webdriver.chrome.driver","C:\\Users\\Mouli Sarkar\\Documents\\Selenium\\chromedriver.exe");
+			System.setProperty("webdriver.chrome.driver","C:\\Users\\Mouli Sarkar\\Documents\\Selenium\\ChromeDriver\\chromedriver.exe");
 			 driver = new ChromeDriver();
 		}
 		else if(BrowserName.equals("IE"))
