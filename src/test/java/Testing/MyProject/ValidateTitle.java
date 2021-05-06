@@ -42,11 +42,7 @@ public class ValidateTitle extends Base {
 	    Assert.assertEquals(l.getTitle().getText(), "FEATURED ");
 	   log .info("Successfully validated Text message");
 	   
-	   Actions a = new Actions(driver);
-		a.moveToElement(driver.findElement(By.name("Contact"))).build().perform();
-	
-		a.moveToElement(driver.findElement(By.name("Contact"))).click().keyDown(Keys.SHIFT).sendKeys("hello").build().perform();
-		
+	  
 		
 	}
 	
