@@ -23,14 +23,14 @@ public class Base {
 	public WebDriver initializeDriver() throws IOException
 	{
 		 prop = new Properties();
-		FileInputStream fis = new FileInputStream("C:\\Users\\Mouli Sarkar\\eclipse-workspace1\\MyProject\\src\\main\\java\\Resources\\data.properties");
+		FileInputStream fis = new FileInputStream(System.getProperty("user.dir")+ "\\src\\main\\java\\Resources\\data.properties");
 		prop.load(fis);
 		BrowserName= prop.getProperty("browser");
 		 url= prop.getProperty("url");
 		if(BrowserName.equals("chrome"))
 		{
 			//execute in chrome browser
-			System.setProperty("webdriver.chrome.driver","C:\\Users\\Mouli Sarkar\\Documents\\Selenium\\ChromeDriver\\chromedriver.exe");
+			System.setProperty("webdriver.chrome.driver",("user.dir")+ "\\src\\main\\java\\Resources\\chromedriver.exe");
 			 driver = new ChromeDriver(); // Polymorphism (method overriding)
 		}
 		else if(BrowserName.equals("IE"))
