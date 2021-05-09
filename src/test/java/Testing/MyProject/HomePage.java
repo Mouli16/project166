@@ -36,7 +36,7 @@ public class HomePage extends Base {  //Inheritance
 		driver.get(url);
 		
 		LandingPage l = new LandingPage(driver);
-		l.getLogin().click();
+		LoginPage lp= l.getLogin();
 		
 		LoginPage lo = new LoginPage(driver);
 		lo.getEmail().sendKeys(username);
