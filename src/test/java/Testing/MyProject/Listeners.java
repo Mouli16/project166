@@ -14,7 +14,7 @@ import com.aventstack.extentreports.Status;
 import Resources.ExtentReporterNG;
 import Resources.Base;
 
-public class Listeners extends Base implements ITestListener {
+public class Listeners extends Base implements ITestListener {  //Inheritance and Abstraction
 	ExtentTest test;
 	ExtentReports extent=ExtentReporterNG.getReportObject();
 	ThreadLocal<ExtentTest> extentTest =new ThreadLocal<ExtentTest>();

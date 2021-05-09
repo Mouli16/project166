@@ -18,7 +18,7 @@ import pageObjects.LandingPage;
 import pageObjects.LoginPage;
 import Resources.Base;
 
-public class HomePage extends Base {
+public class HomePage extends Base {  //Inheritance
 	public WebDriver driver; 
 	
 	public static Logger log =LogManager.getLogger(Base.class.getName());

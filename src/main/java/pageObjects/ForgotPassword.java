@@ -9,10 +9,16 @@ public class ForgotPassword {
 	
 	public WebDriver driver;
 	
-	By email=By.cssSelector("[id='user_email']");
-	By sendMeInstructions=By.cssSelector("[type='submit']");
+	/** accessing private variables through public methods; 
+	locators are not accessible outside this class-->Encapsulation **/
 	
+	private By email=By.cssSelector("[id='user_email']");
+	private By sendMeInstructions=By.cssSelector("[type='submit']");
 	
+
+
+/** @FindBy(id="email")
+WebElement email;  **/
 	
 	
 	

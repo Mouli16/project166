@@ -31,7 +31,7 @@ public class Base {
 		{
 			//execute in chrome browser
 			System.setProperty("webdriver.chrome.driver","C:\\Users\\Mouli Sarkar\\Documents\\Selenium\\ChromeDriver\\chromedriver.exe");
-			 driver = new ChromeDriver();
+			 driver = new ChromeDriver(); // Polymorphism (method overriding)
 		}
 		else if(BrowserName.equals("IE"))
 		{

@@ -8,15 +8,27 @@ public class LoginPage {
 	
 	
 		public WebDriver driver;
-		By email = By.cssSelector("[id='user_email']");
-		By password = By.cssSelector("[type = 'password']");
-		By login = By.cssSelector("[value= 'Log In']");
+		
+
+		/** accessing private variables through public methods; 
+		locators are not accessible outside this class-->Encapsulation **/
+		
+		private By email = By.cssSelector("[id='user_email']");
+		private By password = By.cssSelector("[type = 'password']");
+		private By login = By.cssSelector("[value= 'Log In']");
+		private By forgotPassword = By.cssSelector("[href*='password/new']");
+		
 		
 		public LoginPage(WebDriver driver) 
 		{
 			this.driver= driver;
 		}
 
+public ForgotPassword forgotPassword()
+{
+	driver.findElement(forgotPassword).click();
+	return new ForgotPassword(driver);
+}
 		
 
 		public WebElement getEmail()
