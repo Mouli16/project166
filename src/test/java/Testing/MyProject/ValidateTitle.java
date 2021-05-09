@@ -50,7 +50,7 @@ public class ValidateTitle extends Base {
 	public void validateHeader() throws IOException
 	{
 		
-System.out.println("am i going inside it");
+System.out.println("I love u");
 Assert.assertEquals(l.getHeader().getText(), "AN ACADEMY TO LEARN EVERYTHING ABOUT TESTING");
 		}
 
