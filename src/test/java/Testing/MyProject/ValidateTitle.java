@@ -51,7 +51,7 @@ public class ValidateTitle extends Base {
 	{
 		
 System.out.println("am i going inside it");
-Assert.assertEquals(l.getHeader().getText(), "An Academy to learn Everything about Testing");
+Assert.assertEquals(l.getHeader().getText(), "AN ACADEMY TO LEARN EVERYTHING ABOUT TESTING");
 		}
 
 	
