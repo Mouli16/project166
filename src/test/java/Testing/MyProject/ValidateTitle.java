@@ -21,6 +21,7 @@ import pageObjects.LoginPage;
 public class ValidateTitle extends Base {
 	
 	public WebDriver driver; 
+	LandingPage l;
 	
 	public static Logger log =LogManager.getLogger(Base.class.getName());
 	@BeforeTest
@@ -36,15 +37,23 @@ public class ValidateTitle extends Base {
 	{
 		
 		
-		LandingPage l = new LandingPage(driver);
+		 l = new LandingPage(driver);
 	    l.getTitle().getText();
 	    //compare the text with actual text from browser 
-	    Assert.assertEquals(l.getTitle().getText(), "FEATURED ");
+	    Assert.assertEquals(l.getTitle().getText(), "FEATURED COURSES");
 	   log .info("Successfully validated Text message");
 	   
-	  
+	} 
 		
-	}
+@Test
+	
+	public void validateHeader() throws IOException
+	{
+		
+System.out.println("am i going inside it");
+Assert.assertEquals(l.getHeader().getText(), "An Academy to learn Everything about Testing");
+		}
+
 	
 	@AfterTest
 	public void teardown()

@@ -13,6 +13,7 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 
 
 public class Base {
@@ -31,7 +32,9 @@ public class Base {
 		{
 			//execute in chrome browser
 			System.setProperty("webdriver.chrome.driver","C:\\Users\\Mouli Sarkar\\Documents\\Selenium\\ChromeDriver\\chromedriver.exe");
-			 driver = new ChromeDriver(); // Polymorphism (method overriding)
+			ChromeOptions options =  new ChromeOptions();
+			options.addArguments("headless");
+			driver = new ChromeDriver(options); // Polymorphism (method overriding)
 		}
 		else if(BrowserName.equals("IE"))
 		{
