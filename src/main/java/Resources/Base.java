@@ -31,7 +31,8 @@ public class Base {
 		if(BrowserName.equals("chrome"))
 		{
 			//execute in chrome browser
-			System.setProperty("webdriver.chrome.driver" , "C:\\Users\\Mouli Sarkar\\Documents\\Selenium\\ChromeDriver\\chromedriver.exe");
+			
+			System.setProperty("webdriver.chrome.driver" , System.getProperty("user.dir")+ "\\src\\main\\java\\Resources\\chromedriver.exe");
 			ChromeOptions options =  new ChromeOptions();
 			options.addArguments("headless");
 			driver = new ChromeDriver(options); // Polymorphism (method overriding)

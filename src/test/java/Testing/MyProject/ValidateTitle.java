@@ -40,7 +40,7 @@ public class ValidateTitle extends Base {
 		 l = new LandingPage(driver);
 	    l.getTitle().getText();
 	    //compare the text with actual text from browser 
-	    Assert.assertEquals(l.getTitle().getText(), "FEATURED COURSES");
+	    Assert.assertEquals(l.getTitle().getText(), "FEATURED ");
 	   log .info("Successfully validated Text message");
 	   
 	} 
